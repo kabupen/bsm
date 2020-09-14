@@ -1,0 +1,186 @@
+
+\documentclass[a4paper,11pt,uplatex]{jsreport}
+
+\begin{document}
+
+\chapter{はじめに}
+素粒子標準模型を「感覚的に」理解することを目的としたメモ兼ドキュメント。
+最終的には
+。。。
+を理解することを目的としている。
+どこから読んでも良いように、随所に非常に重複する形で脚注による補足を設けた。
+はじめから最後まで読む人には「何回脚注で説明するねん」と思われるかもしれないが、途中からつまみ読みする人には初めての脚注だったりする。
+どちらかといえば途中からつまみ読みする人に向けたドキュメントでもあるので、辛抱頂きたい。
+
+\section{歴史的な流れ}
+どのような背景があって、このような発想に至ったか。
+それを押さえて置くだけでも、理解が深まるはずである。
+
+\section{オイラー・ラグランジュ方程式}
+
+\chapter{量子力学}
+\section{基本的な関係式一覧}
+
+\subsubsection{転置}
+\begin{equation}
+  (H_{ij})^{T}=(H_{ji})
+\end{equation}
+対角成分は変換を受けず、非対角成分のみが変換を受ける。
+
+\begin{equation}
+  \left(
+    \begin{array}{cccc}
+      a_{11} & a_{12} & a_{13} & a_{14} \\
+      a_{21} & a_{22} & a_{23} & a_{24} \\
+      a_{31} & a_{32} & a_{33} & a_{34} \\
+      a_{41} & a_{42} & a_{43} & a_{44} 
+    \end{array}
+  \right)
+    ^{T}
+    =
+  \left(
+    \begin{array}{cccc}
+      a_{11} & a_{21} & a_{31} & a_{41} \\
+      a_{12} & a_{22} & a_{32} & a_{42} \\
+      a_{13} & a_{32} & a_{33} & a_{43} \\
+      a_{14} & a_{24} & a_{34} & a_{44} 
+    \end{array}
+  \right)
+\end{equation}
+
+\subsubsection{エルミート共役}
+「エルミート共役をとる」とは、（１）行列を転置して、（２）複素共役をとったもの。
+\begin{equation}
+  (H_{ij})^{\dagger}=(H_{ji})^{*}
+\end{equation}
+
+
+\subsubsection{エルミート演算子、エルミート行列}
+エルミート共役をとった演算子が自分自身である演算子のこと。
+「この行列はエルミートである」とも表現される
+\begin{equation}
+H^{\dagger}=H
+\end{equation}
+
+\subsubsection{ユニタリー演算子、ユニタリー行列}
+エルミート共役をとったものと自分自身の積が可換で、かつ単位行列に等しい演算子。
+\begin{equation}
+H^{\dagger}H=HH^{\dagger}=I
+\end{equation}
+
+\subsubsection{パウリ行列}
+\begin{equation}
+  \sigma^1 = 
+  \left(
+    \begin{array}{cc}
+      0 & 1 \\
+      1 & 0 
+    \end{array}
+  \right),~
+  \sigma^2 = 
+  \left(
+    \begin{array}{cc}
+      0 & -i \\
+      i & 0 
+    \end{array}
+  \right),~
+  \sigma^3 = 
+  \left(
+    \begin{array}{cc}
+      1 & 0 \\
+      0 & -1 
+    \end{array}
+  \right)
+\end{equation}
+
+\section{基本的な関係式一覧（量子力学）}
+\begin{eqnarray}
+  E &\to& i\frac{\partial}{\partial t} \\
+  p &\to& -i\nabla \\
+  p^{\mu} &\to& i\partial^{\mu} = i(\partial^0, -\partial^1, -\partial^2, -\partial^3)
+\end{eqnarray}
+
+
+
+\chapter{導入}
+\section{ローレンツ変換}
+「ある慣性系$S$からある慣性系$S\prime$へ座標変換したときに、物理法則は変わらない」というのが相対論からの要請（相対論的不変性）である。
+この座標変換をローレンツ変換といい、
+\begin{equation}
+  \Lambda_{\mu}^{\nu} = \left(
+    \begin{array}{cccc}
+      \gamma       & -\beta\gamma & 0 & 0 \\
+      -\beta\gamma & \gamma       & 0 & 0 \\
+      0            & 0            & 1 & 0 \\
+      0            & 0            & 0 & 1
+    \end{array}
+  \right)
+\end{equation}
+で表される行列を用いると
+\begin{equation}
+  x\prime^{\mu} = \Lambda^\mu_\nu x^\nu
+\end{equation}
+
+\chapter{クラインゴルドン方程式}
+\section{クラインゴルドン方程式}
+
+\chapter{ディラック方程式}
+\section{ディラック方程式}
+
+自由\footnote{ゲージ場と相互作用していないことを意味する。}粒子の従うディラック方程式は
+\begin{equation}
+  (i\gamma^{\mu}\partial_{\mu}-mI_4)\psi(x)=0
+\end{equation}
+ここで、$m$は粒子の質量、$\psi$は粒子のスピノルである。
+$\gamma$行列は$4\times4$成分持っている行列であり、
+\begin{equation}
+  \{ \gamma^{\mu}, \gamma^{\nu} \} = 2\eta^{\mu\nu}I
+\end{equation}
+の反交換関係を満たしていればどのような表式でもよい\footnote{具体的な表式は無限通り存在する。}。
+
+このディラック方程式を導くラグランジアンは
+\begin{equation}
+  \mathcal{L}=\bar{\psi}(i\gamma^{\mu}\partial_{\mu}-m)\psi
+\end{equation}
+
+ディラック粒子の例として電子を考えると、電磁場と相互作用するディラック方程式は
+\begin{equation}
+  (i\gamma^{\mu}(\partial_{\mu}-iqA_\mu)-m)\psi(x)=0
+\end{equation}
+
+
+
+\section{ゲージ理論}
+
+
+\section{QED}
+
+ゲージ場$A_{\mu}$に対する運動項（kinetic term) は
+\begin{equation}
+  -\frac{1}{4}F_{\mu\nu}F^{\mu\nu}
+\end{equation}
+であり、ここで$F_{\mu\nu}$は場の強さ（field strength）を表している。
+ゲージ変換の下で：
+\begin{eqnarray}
+  F^{\mu\nu\prime}
+  &=& \partial^{\mu}(A^{\nu}+\frac{1}{q}\partial^{\nu}) - \partial^{\nu}(A^{\mu}+\frac{1}{q}\partial^{\mu}) \\
+  &=& \partial^{\mu}A^{\nu} - \partial^{\nu}A^{\mu} = F^{\mu\nu}.
+\end{eqnarray}
+であり、ゲージ不変性\footnote{ゲージ変換の下で式の形（物理法則）が変わらないということ}を持つ。
+
+ゲージ場$A_{\mu}$の質量項は
+\begin{equation}
+  \frac{1}{2}m_A^2A_{\mu}A^{\mu},
+\end{equation}
+と表されるが、これはゲージ変換の下で不変ではない。
+ゲージ原理を第一原理として理論体系を構築しようとしているので、この項を入れることはできない。
+そのためゲージ場の質量$m_A$は正確に０でなければならない\footnote{ここでの質量$m$は「ゲージ場」の質量であり、ディラック粒子の質量ではない。}。
+以上を踏まえて、QEDのラグランジアンは以下の式で表される。
+\begin{equation}
+  \mathcal{L} = \bar{\psi}(i\gamma^{\mu}\partial_{\mu}-m)\psi + e\bar{\psi}\gamma^{\mu}\psi A_{\mu} -\frac{1}{4}F_{\mu\nu}F^{\mu\nu}.
+\end{equation}
+
+\section{QCD}
+
+
+\end{document}
