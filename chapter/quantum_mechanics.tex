@@ -1,0 +1,84 @@
+\chapter{量子力学}
+\section{基本的な関係式一覧}
+
+\subsubsection{転置}
+\begin{equation}
+  (H_{ij})^{T}=(H_{ji})
+\end{equation}
+対角成分は変換を受けず、非対角成分のみが変換を受ける。
+
+\begin{equation}
+  \left(
+    \begin{array}{cccc}
+      a_{11} & a_{12} & a_{13} & a_{14} \\
+      a_{21} & a_{22} & a_{23} & a_{24} \\
+      a_{31} & a_{32} & a_{33} & a_{34} \\
+      a_{41} & a_{42} & a_{43} & a_{44} 
+    \end{array}
+  \right)
+    ^{T}
+    =
+  \left(
+    \begin{array}{cccc}
+      a_{11} & a_{21} & a_{31} & a_{41} \\
+      a_{12} & a_{22} & a_{32} & a_{42} \\
+      a_{13} & a_{32} & a_{33} & a_{43} \\
+      a_{14} & a_{24} & a_{34} & a_{44} 
+    \end{array}
+  \right)
+\end{equation}
+
+\subsubsection{エルミート共役}
+「エルミート共役をとる」とは、（１）行列を転置して、（２）複素共役をとったもの。
+\begin{equation}
+  (H_{ij})^{\dagger}=(H_{ji})^{*}
+\end{equation}
+
+
+\subsubsection{エルミート演算子、エルミート行列}
+エルミート共役をとった演算子が自分自身である演算子のこと。
+「この行列はエルミートである」とも表現される
+\begin{equation}
+H^{\dagger}=H
+\end{equation}
+
+\subsubsection{ユニタリー演算子、ユニタリー行列}
+エルミート共役をとったものと自分自身の積が可換で、かつ単位行列に等しい演算子。
+\begin{equation}
+H^{\dagger}H=HH^{\dagger}=I
+\end{equation}
+
+\subsubsection{パウリ行列}
+\begin{equation}
+  \sigma^1 = 
+  \left(
+    \begin{array}{cc}
+      0 & 1 \\
+      1 & 0 
+    \end{array}
+  \right),~
+  \sigma^2 = 
+  \left(
+    \begin{array}{cc}
+      0 & -i \\
+      i & 0 
+    \end{array}
+  \right),~
+  \sigma^3 = 
+  \left(
+    \begin{array}{cc}
+      1 & 0 \\
+      0 & -1 
+    \end{array}
+  \right)
+\end{equation}
+
+\section{基本的な関係式一覧（量子力学）}
+\begin{eqnarray}
+  E &\to& i\frac{\partial}{\partial t} \\
+  p &\to& -i\nabla \\
+  p^{\mu} &\to& i\partial^{\mu} = i(\partial^0, -\partial^1, -\partial^2, -\partial^3)
+\end{eqnarray}
+
+
+

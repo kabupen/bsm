@@ -1,0 +1,57 @@
+
+\chapter{Appendix}
+\section{$\gamma$行列の性質}
+反交換関係：
+\begin{eqnarray}
+  \{ \gamma^\mu, \gamma^\nu \} = \gamma^\mu\gamma^\nu + \gamma^\nu\gamma^\mu = 2\eta^{\mu\nu}
+\end{eqnarray}
+ここから、$\mu=\nu$のときに$(+1,-1,-1,-1)$のいずれかの値を取り（計量テンソルの対角成分）、$\mu\neq\nu$の場合には0の値を取ることがわかる（非対角成分）。
+
+$\mu=\nu$の場合（例えば$\mu=\nu=0$）、
+\begin{eqnarray}
+  \gamma^0\gamma^0 + \gamma^0\gamma^0 &=& 2\eta^{00}\\
+  2\gamma^0\gamma^0  &=& 2 \\
+  \gamma^0\gamma^0   &=& +1 
+\end{eqnarray}
+また0以外の値の場合は計量テンソルの定義から、右辺が-1になる。
+
+また$\mu \neq \nu$の場合、
+\begin{eqnarray}
+  \gamma^\mu\gamma^\nu + \gamma^\nu\gamma^\mu &=& 0 \\
+  \gamma^\mu\gamma^\nu &=& (-1)\gamma^\nu\gamma^\mu 
+\end{eqnarray}
+が成り立ち、行列の積の順序を入れ替えるとその回数分だけ$(-1)$が掛かる。
+つまりガンマ行列は限定的に（符号が付くという条件があるだけで）入れ替え可能で、符号にだけ注意しておけばよい。
+
+
+\begin{eqnarray}
+  \gamma^5 = i\gamma^0\gamma^1\gamma^2\gamma^3
+\end{eqnarray}
+
+\begin{eqnarray}
+  (\gamma^5)^2 
+  &=& (i\gamma^0\gamma^1\gamma^2\gamma^3)^2 \\
+  &=& (i\gamma^0\gamma^1\gamma^2\gamma^3)(i\gamma^0\gamma^1\gamma^2\gamma^3) \\
+  &=& (-1)\gamma^0\gamma^1\gamma^2\gamma^3\gamma^0\gamma^1\gamma^2\gamma^3 \\
+  &=& (-1)(-1)^3\gamma^0\gamma^0\gamma^1\gamma^2\gamma^3\gamma^1\gamma^2\gamma^3 \\
+  &=& (-1)(-1)^3\gamma^0\gamma^0(-1)^2\gamma^1\gamma^1\gamma^2\gamma^3\gamma^2\gamma^3 \\
+  &=& (-1)(-1)^3\gamma^0\gamma^0(-1)^2\gamma^1\gamma^1(-1)\gamma^2\gamma^2\gamma^3\gamma^3 \\
+  &=& (-1)(-1)^3(-1)^2(-1) \\
+  &=& -1
+\end{eqnarray}
+
+
+\section{湯川相互作用}
+スカラー場（擬スカラー場）とフェルミオンの相互作用を表す。
+パイオンによる核力を記述する際に用いられることと、標準理論の中ではスカラーボソンであるヒッグス場とフェルミオン場の相互作用を記述する際に用いられる。
+スカラー場の場合（ヒッグス場の場合）
+\begin{eqnarray}
+  \mathcal{L} = -g\bar{\psi}\phi\psi
+\end{eqnarray}
+ここで$g$は湯川結合定数を表す。また擬スカラー場の場合
+\begin{eqnarray}
+  \mathcal{L} = -g\bar{\psi}i\gamma^5\phi\psi
+\end{eqnarray}
+となる。これは双一次形式で見た形から連想できる。
+標準理論を扱う場合にはスカラー場のパターンが最も重要である。
+

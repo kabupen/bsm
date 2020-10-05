@@ -1,0 +1,246 @@
+
+\chapter{ディラック方程式}
+\section{ディラック方程式}
+
+自由\footnote{ゲージ場と相互作用していないことを意味する。}粒子の従うディラック方程式は
+\begin{equation}
+  (i\gamma^{\mu}\partial_{\mu}-mI_4)\psi(x)=0
+\end{equation}
+ここで、$m$は粒子の質量、$\psi$は粒子のスピノルである。
+$\gamma$行列は$4\times4$成分持っている行列であり、
+\begin{equation}
+  \{ \gamma^{\mu}, \gamma^{\nu} \} = 2\eta^{\mu\nu}I
+\end{equation}
+の反交換関係を満たしていればどのような表式でもよい\footnote{具体的な表式は無限通り存在する。}。
+
+このディラック方程式を導くラグランジアンは
+\begin{equation}
+  \mathcal{L}=\bar{\psi}(i\gamma^{\mu}\partial_{\mu}-m)\psi
+\end{equation}
+
+ディラック粒子の例として電子を考えると、電磁場と相互作用するディラック方程式は
+\begin{equation}
+  (i\gamma^{\mu}(\partial_{\mu}-iqA_\mu)-m)\psi(x)=0
+\end{equation}
+
+\section{双一次形式}
+
+次の量をスピノル場$\psi(x)$の双一次形式と呼ぶ。
+\begin{equation}
+  \bar{\psi(x)}\Gamma\psi(x)
+\end{equation}
+ここで、$\bar{\psi(x)}$は$\psi(x)$のディラック共役と呼ばれ、次式で定義される。
+\begin{equation}
+  \bar{\psi(x)} \equiv \psi^{\dagger}(x)\gamma^0
+\end{equation}
+$\Gamma$は$\gamma$行列の積で与えられる量で、特に
+\begin{equation}
+  \Gamma=I_4,~~\gamma^\mu,~~ \sigma^{\mu\nu}=\frac{i}{2}[ \gamma^\mu,\gamma^\nu ],~~\gamma^5,~~ \gamma^\mu\gamma^5
+\end{equation}
+が重要である。
+
+\begin{table}[]
+  \centering
+  \begin{tabular}{ccc}
+    名称         & 双一次形式 & パリティ変換後 \\
+    スカラー     & $\bar{\psi}\psi$                    & $\bar{\psi}\psi$   \\
+    擬スカラー   & $i\bar{\psi}\gamma^5\psi*$          & $-i\bar{\psi}\gamma^5\psi*$         \\
+    ベクトル     & $\bar{\psi}\gamma^{\mu}\psi$        & $\bar{\psi}\gamma_{\mu}\psi$    \\
+    軸性ベクトル & $\bar{\psi}\gamma^5\gamma^\mu\psi$  & $-\bar{\psi}\gamma^5\gamma_\mu\psi$ \\
+    テンソル     & $\bar{\psi}\sigma^{\mu\nu}\psi$     & $\bar{\psi}\sigma_{\mu\nu}\psi$   
+  \end{tabular}
+\end{table}
+
+\section{カレント}
+
+\section{カイラルスピノル}
+
+$\gamma^{\mu}$行列の具体的な表式は無限個存在している。
+どのような表示形式を選んでも本質は変わらないので、注目したい性質に合わせて選べば良い\footnote{物の性質は変わらず何で観測するか・調べるかで見え方が変わっているだけだと感じる。}。
+ここではカイラル表示（ワイル表示）の$\gamma^{\mu}$行列について調べてみる。
+
+\begin{equation}
+  \gamma_W^0 \equiv
+  \left(
+    \begin{array}{cc}
+      0   & I_2 \\
+      I_2 & 0 
+    \end{array}
+  \right)
+    ,~
+  \gamma_W^j \equiv
+  \left(
+    \begin{array}{cc}
+      0        & -\sigma^j \\
+      \sigma^j & 0 
+    \end{array}
+  \right)
+\end{equation}
+上記で定義された表現方式をカイラル表示（ワイル表示）と呼び、以下の議論で見るようにカイラリティに関して重要な表式になる。
+この表式を用いると、$\gamma^5$は
+\begin{eqnarray}
+  \gamma^5 = i\gamma^0\gamma^1\gamma^2\gamma^3 = ... &=& 
+  i 
+  \left(
+    \begin{array}{cc}
+      -\sigma^1\sigma^2\sigma3  & 0 \\
+      0                         & \sigma^1\sigma^2\sigma3 
+    \end{array}
+  \right)\\
+  &=& 
+  \left(
+    \begin{array}{cc}
+      I_2 & 0 \\
+      0   & -I_2
+    \end{array}
+  \right)
+\end{eqnarray}
+となる。
+カイラル表示の特徴は$\gamma^5$が対角化された表式\footnote{対角成分しか値を持っていない行列のこと。それ以外は非対角成分と呼ぶ}になっているという点である。
+この$\gamma^5$を4成分スピノルに作用させると、
+\begin{eqnarray}
+  \gamma^5\psi &=& 
+  \left(
+    \begin{array}{cc}
+      I_2 & 0 \\
+      0   & -I_2
+    \end{array}
+  \right)
+  \left(
+    \begin{array}{c}
+      \xi(x) \\
+      \zeta(x)
+    \end{array}
+  \right)\\
+  &=&
+  \left(
+    \begin{array}{c}
+      \xi(x) \\
+      -\zeta(x)
+    \end{array}
+  \right)\\
+  &=&
+  \left(
+    \begin{array}{c}
+      \xi(x) \\
+      0
+    \end{array}
+  \right) - 
+  \left(
+    \begin{array}{c}
+      0 \\
+      \zeta(x)
+    \end{array}
+  \right)
+\end{eqnarray}
+ここで、$I_2$が$2\times2$成分の行列であることに留意しておき、スピノルとして計4成分のままであることをリマインドしておこう。
+ゆえに$\psi(x)$の上２成分は$\gamma^5_W$の固有状態であり、その固有値は+1、下２成分の固有値は-1である。
+\begin{eqnarray}
+  \gamma^5 
+  \left(
+    \begin{array}{c}
+      \xi(x) \\
+      0
+    \end{array}
+  \right)
+  &=& 
+  +1
+  \left(
+    \begin{array}{c}
+      \xi(x) \\
+      0
+    \end{array}
+  \right)
+  \equiv
+  \psi_R \\
+  \gamma^5 
+  \left(
+    \begin{array}{c}
+      0 \\
+      \zeta(x) 
+    \end{array}
+  \right)
+  &=& 
+  -1
+  \left(
+    \begin{array}{c}
+      0 \\
+      \zeta(x)
+    \end{array}
+  \right)
+  \equiv
+  -
+  \psi_L
+\end{eqnarray}
+$
+  \left(
+    \begin{array}{c}
+      \xi(x) \\
+     0 
+    \end{array}
+  \right)
+$
+、
+$
+  \left(
+    \begin{array}{c}
+      0 \\
+      \zeta(x)
+    \end{array}
+  \right)
+$
+はカイラルスピノル（ワイルスピノル）と呼ばれ、$\psi_R$（スピン右巻き状態、right-handed）、 $\psi_L$（スピン左巻き状態、left-handed）と表される。
+また、$\gamma^5$の固有値をカイラリティと呼び、以上の議論で見たように右巻き粒子は+1、左巻き粒子は-1のカイラリティを持つ。
+繰り返しになるが以上の議論をまとめると、
+\begin{eqnarray}
+  \gamma^5\psi = \psi_R - \psi_L \\
+  \gamma^5\psi_R = (+1)\psi_R \\
+  \gamma^5\psi_L = (-1)\psi_L 
+\end{eqnarray}
+である。$\gamma_D^5$の固有状態をカイラルスピノル、固有状態をカイラリティと呼ぶ。
+
+ここで、4成分スピノルから右巻き・左巻き状態を取り出すための射影演算子を定義する。
+\begin{eqnarray}
+  P_R \equiv \frac{1}{2}(I_4+\gamma^5) \\
+  P_L \equiv \frac{1}{2}(I_4-\gamma^5)
+\end{eqnarray}
+実際にこれらの演算子をスピノル$\psi$に作用させると
+\begin{eqnarray}
+  P_R\psi 
+  &=& \frac{1}{2}(I_4+\gamma^5)(\psi_R+\psi_L) \\
+  &=& \frac{1}{2}(\psi_R + \psi_L +\gamma^5\psi_R+ \gamma^5\psi_L) \\
+  &=& \frac{1}{2}(\psi_R + \psi_L +\psi_R - \psi_L) \\
+  &=& \psi_R
+\end{eqnarray}
+と右巻き成分だけを取り出すことが出来る（左巻きに対しても全く同じ議論で証明できる）\footnote{ここでのキモは$\psi=\psi_R + \psi_L$と単純に線形結合で表されるということを覚えているかどうかだ。あとは、カイラリティの正負に気をつければ簡単に証明することができる}。
+
+\section{カイラル固有状態、ヘリシティ固有状態}
+
+カイラルスピノルの性質を調査するために、電磁場中のディラック方程式を再度用いる。
+\begin{eqnarray}
+  \left( i\gamma^\mu(\partial_\mu + iqA_\mu) -m \right)\psi = 0
+\end{eqnarray}
+両辺左から射影演算子$P_R$を作用させると
+\begin{eqnarray}
+  \frac{1}{2}(I_4+\gamma^5)\left( i\gamma^\mu(\partial_\mu + iqA_\mu) -m \right)\psi = 0
+\end{eqnarray}
+
+\section{パイオン崩壊}
+カイラリティとヘリシティの議論によく登場するのが、パイ中間子の崩壊である。
+$pi^{+}$は$W^+$を介して$pi^+\to \nu_\ell + \ell^+$に崩壊し、荷電レプトンの質量差からも崩壊率は$\Gamma(pi^+\to \nu_e + e^+)>\Gamma(pi^+\to \nu_\mu + \mu^+)$であると予想される。
+しかし実際には
+
+\begin{equation}
+  \frac{\Gamma(pi^+\to \nu_e + e^+)}{\Gamma(pi^+\to \nu_\mu + \mu^+)} = 1.23\times 10^{-4}
+\end{equation}
+
+であり、優位にミューオンへの崩壊のほうが多い実験結果が示されている。
+これを説明するのがカイラリティ、ヘリシティである。なぜ電子ではなミューオンへ崩壊することになるのか、$\pi^+$中間子の静止系で考えると説明がつく。
+\begin{itemize}
+  \item $\pi^+$のスピンは0であるため、$\nu_\ell$、$\ell^+$のスピンは反対方向を向いている（互いに外側、もしくは互いに内側）
+  \item SMでは$\nu_\ell$は左巻きしか存在しないので、ニュートリノ側のスピン方向が決まる（内側を向いている）
+  \item そのため$\ell^+$のスピンの向きが決定する（内側）
+  \item $\ell^+$は運動量方向とスピン方向が逆向きの左巻き粒子ということになるが、弱い相互作用はLH粒子、もしくはRH反粒子にしか結合しない
+  \item そのため、LH反粒子とは本来結合しないはずである
+  \item $\ell^+$が右巻きになるには、追い越せる速度である必要がある（電子$<<$ミューオンの質量なので、ミューオンが選択される）
+\end{itemize}

@@ -1,0 +1,31 @@
+\chapter{ゲージ理論}
+
+
+\section{QED}
+
+ゲージ場$A_{\mu}$に対する運動項（kinetic term) は
+\begin{equation}
+  -\frac{1}{4}F_{\mu\nu}F^{\mu\nu}
+\end{equation}
+であり、ここで$F_{\mu\nu}$は場の強さ（field strength）を表している。
+ゲージ変換の下で：
+\begin{eqnarray}
+  F^{\mu\nu\prime}
+  &=& \partial^{\mu}(A^{\nu}+\frac{1}{q}\partial^{\nu}) - \partial^{\nu}(A^{\mu}+\frac{1}{q}\partial^{\mu}) \\
+  &=& \partial^{\mu}A^{\nu} - \partial^{\nu}A^{\mu} = F^{\mu\nu}.
+\end{eqnarray}
+であり、ゲージ不変性\footnote{ゲージ変換の下で式の形（物理法則）が変わらないということ}を持つ。
+
+ゲージ場$A_{\mu}$の質量項は
+\begin{equation}
+  \frac{1}{2}m_A^2A_{\mu}A^{\mu},
+\end{equation}
+と表されるが、これはゲージ変換の下で不変ではない。
+ゲージ原理を第一原理として理論体系を構築しようとしているので、この項を入れることはできない。
+そのためゲージ場の質量$m_A$は正確に０でなければならない\footnote{ここでの質量$m$は「ゲージ場」の質量であり、ディラック粒子の質量ではない。}。
+以上を踏まえて、QEDのラグランジアンは以下の式で表される。
+\begin{equation}
+  \mathcal{L} = \bar{\psi}(i\gamma^{\mu}\partial_{\mu}-m)\psi + e\bar{\psi}\gamma^{\mu}\psi A_{\mu} -\frac{1}{4}F_{\mu\nu}F^{\mu\nu}.
+\end{equation}
+
+\section{QCD}
